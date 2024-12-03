@@ -1,27 +1,14 @@
 // insertion sort
 let arr = [8,5,6,7,1,4,3]
 function insertionSort(arr){
-   
-
-    for(let i = 0; i < arr.length; i++){
-        
-        
-        let temp = arr[i];
-        let slice1 = arr.slice(0,i);
-        let slice2 = arr.18slice(i,arr.length)
-
-        for(let j = i+1; j < slice2.length; j++){
-            if(slice2[j] < temp){
-                
-                temp = slice2[j];
-                let splice = slice2.splice(j,1);
-                let num = splice[0]
-                slice2.unshift(num)
-            }
+    for(let i = 1; i < arr.length; i++){
+        let j = i-1;
+        let key = arr[i];
+        while (j >=0 && arr[j] > key){
+            arr[j+1] = arr[j];
+            j--;
         }
-        
-        arr = [...slice1 ,...slice2]
-
+        arr[j+1] = key;
     }
     return arr
 }

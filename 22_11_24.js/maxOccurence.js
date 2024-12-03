@@ -13,4 +13,4 @@ function maxOccurnce(arr){
     }
     return result;
 }
-console.log(maxOccurnce([5,5,4,1,1,1,6,7,8]))
+console.log(maxOccurnce([5,5,4,4,4,6,7,8]))
